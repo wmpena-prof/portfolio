@@ -269,6 +269,7 @@ input, select, textarea {
 		pre code {
 			display: block;
 			line-height: 1.75;
+			border-radius: 6px;
 			padding: 1em 1.5em;
 			overflow-x: auto;
 		}
@@ -2208,6 +2209,27 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
+			}
+
+			/* === Custom cropped image === */
+			.crop-image {
+				width: 576px;
+				height: 515px;
+				object-fit: cover;
+				object-position: center;
+			}
+
+			.image .crop-image {
+				width: 576px;
+				height: 515px;
+				object-fit: cover;
+				object-position: center;
+			}
+
+			.image.crop-wrapper {
+				width: 576px;
+				height: 515px;
+				overflow: hidden;
 			}
 
 			@media screen and (max-width: 736px) {
