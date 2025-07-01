@@ -288,6 +288,14 @@ input, select, textarea {
 		text-align: left;
 	}
 
+
+	/* Custom code block alignment */
+	.code-left pre {
+	text-align: left;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	}	
+
 	.align-center {
 		text-align: center;
 	}
@@ -3015,6 +3023,12 @@ input, select, textarea {
 					margin: 0 auto;
 					max-width: 100%;
 					width: 65em;
+				}
+
+				.spotlights > section > .content > .align-left {
+					text-align: left;
+					margin-left: 0;      /* ensures no extra indentation */
+					padding-left: 0;     /* optional, for tighter alignment */
 				}
 
 			.spotlights > section:nth-child(2n) {
