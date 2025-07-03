@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>Hexacopter Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<a href="index.html" class="logo"><strong>Home</strong></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -60,12 +60,15 @@
 					<div id="main">
 
 						<!-- One -->
-							<section id="one">
+							<section id="one"></section>
 								<div class="inner">
 									<header class="major">
 										<h2>Main Goal</h2>
 									</header>
 									<p>Analyzing the affects that actuators have on a hex copter wrench forces when attached to a robotic arm with a force/torque sensor.</p>
+									<a class="image">
+										<img src="images/project_imgs/hexacopter/ur5e_rover_drone_1_scaled.jpg" alt="" />
+									</a>
 								</div>
 							</section>
 
@@ -89,7 +92,7 @@
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/project_imgs/hexacopter/drone_pic_2_cropped.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
@@ -116,14 +119,13 @@
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
 												<li><a href="hexacopter_ros2.html" class="button">Learn more</a></li>
-												<li><a href="https://github.com/coloms9/ft300_hex_rotor_ros_ws" class="button">ROS 2 Repo</a></li>
 											</ul>
 										</div>
 									</div>
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/project_imgs/hexacopter/drone_pic_2_cropped.jpg" alt="" data-position="top center" />
+										<img src="images/project_imgs/hexacopter/testing_pic_2.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
@@ -132,7 +134,8 @@
 											</header>
 											<p>Input here.</p>
 											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
+												<a href="#" class="button show-code-btn" data-target="minute_test_pic">Minute Test Data</a>
+												<a href="#" class="button show-code-btn" data-target="minute_test_pic">Minute Test Data</a>
 											</ul>
 										</div>
 									</div>
@@ -233,6 +236,60 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- Show Electronics Picutes Button -->
+		<div id="minute_test_pic" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<a class="image">
+					<img src="images/project_imgs/hexacopter/minute_test_plotjuggler_scaled.png" alt="" data-position="25% 25%" />
+				</a>
+			</div>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+			// Open modal on button click
+			document.querySelectorAll(".show-code-btn").forEach(btn => {
+				btn.addEventListener("click", function (event) {
+				event.preventDefault();
+				const targetId = btn.getAttribute("data-target");
+				const modal = document.getElementById(targetId);
+				if (modal) modal.style.display = "block";
+				});
+			});
+
+			// Close modal on click of 'X' or outside content
+			document.querySelectorAll(".modal").forEach(modal => {
+				modal.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
+
+				window.addEventListener("click", function (event) {
+				if (event.target === modal) {
+					modal.style.display = "none";
+				}
+				});
+			});
+
+			// Close modal on Escape key
+			window.addEventListener("keydown", function (event) {
+				if (event.key === "Escape") {
+				document.querySelectorAll(".modal").forEach(modal => modal.style.display = "none");
+				}
+			});
+
+			// Copy code to clipboard
+			document.querySelectorAll(".copyBtn").forEach((copyBtn, index) => {
+				copyBtn.addEventListener("click", function () {
+				const codeBlock = copyBtn.parentElement.querySelector("code");
+				const text = codeBlock.innerText;
+				navigator.clipboard.writeText(text).then(() => {
+					copyBtn.innerText = "Copied!";
+					setTimeout(() => copyBtn.innerText = "Copy", 1000);
+				});
+				});
+			});
+			});
+			</script>
 
 	</body>
 </html>
