@@ -45,14 +45,12 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/project_imgs/hexacopter/hexacopter_drone_model_cropped.png" alt="" />
+								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
 								<h1>Hexacopter Testing</h1>
 							</header>
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
 							</div>
 						</div>
 					</section>
@@ -84,6 +82,7 @@
                                                 <source src="/videos/hexacopter/live_exp_test.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
                                             <header class="major">
 												<h3>Live Lowpass Filter Test</h3>
 											</header>
@@ -91,8 +90,13 @@
                                                 <source src="/videos/hexacopter/live_lowpass_test.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
 										</div>
 									</div>
+								</section>
+
+								<section>
+									<p> </p>
 								</section>
 
                                 
@@ -107,6 +111,7 @@
                                                 <source src="/videos/hexacopter/gazebo_offboard_test.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
                                             <header class="major">
 												<h3>Gazebo Motor Test</h3>
 											</header>
@@ -114,8 +119,13 @@
                                                 <source src="/videos/hexacopter/gazebo_actuator_test.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
 										</div>
 									</div>
+								</section>
+
+								<section>
+									<p> </p>
 								</section>
 
                                 <!-- Actuator tests -->
@@ -129,6 +139,7 @@
                                                 <source src="/videos/hexacopter/single_actuator_test.MOV" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
                                             <header class="major">
 												<h3>Full Motor Test</h3>
 											</header>
@@ -136,44 +147,34 @@
                                                 <source src="/videos/hexacopter/full_actuator_test.MOV" type="video/mp4" />
                                                 Your browser does not support the video tag.
                                             </video>
+											<p> </p>
 									</div>
 								</section>
 
-
-
 								<section>
-									<a class="image">
-										<img src="images/project_imgs/hexacopter/drone_pic_2_cropped.jpg" alt="" data-position="25% 25%" />
-									</a>
+									<p> </p>
+								</section>
+
+
+                                <!--- Minute Test Section --->
+								<section>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Hexzcopter Construction</h3>
+												<h3>Mounted Test</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+											<a class="image">
+												<img src="images/project_imgs/hexacopter/minute_test_plotjuggler_scaled.png" alt="" data-position="25% 25%" />
+											</a>
+											<p>Above is a plot of the commands sent to the drone and data collected from the FT-300 sensor while having the drone mounted. The motors were set to 100% for 60 seconds. The top graph plots the command sent to the drone to enable to motors against time. The Bottom graph plots the filter force in the z axis against time.</p>
 											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
+												<a href="#" class="button show-code-btn" data-target="mounted_drone_video">Mounted Drone Video</a>
+												<p>_______________</p>
+												<a href="#" class="button show-code-btn" data-target="testing_photos">Testing Photo</a>
 											</ul>
 										</div>
 									</div>
 								</section>
-								<section>
-									<a class="image">
-										<img src="images/project_imgs/hexacopter/drone_electronics_pic_1.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Hexacopter Electronics</h3>
-											</header>
-											<p>Describe all the electrons in the drone and the soldering work.</p>
-											<ul class="actions">
-												<a href="#" class="button show-code-btn" data-target="electrons_pics">More Pictures</a>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
 
 						<!-- Three -->
 							<section id="three">
@@ -270,61 +271,68 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-
-		<!-- Show Electronics Picutes Button -->
-		<div id="electrons_pics" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<a class="image">
-					<img src="images/project_imgs/hexacopter/drone_power_conn_pic_scaled.jpg" alt="" data-position="25% 25%" />
-					<img src="images/project_imgs/hexacopter/computer_drone_data_conn_pic_1_scaled.jpg" alt="" data-position="25% 25%" />
-				</a>
+			<!-- Show Mounted Drone Video -->
+			<div id="mounted_drone_video" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<video width="1160" autoplay loop muted>
+						<source src="/videos/hexacopter/mounted_drone_test.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
-		</div>
 
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-			// Open modal on button click
-			document.querySelectorAll(".show-code-btn").forEach(btn => {
-				btn.addEventListener("click", function (event) {
-				event.preventDefault();
-				const targetId = btn.getAttribute("data-target");
-				const modal = document.getElementById(targetId);
-				if (modal) modal.style.display = "block";
+			<!-- Show Testing Photos -->
+			<div id="testing_photos" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<img src="images/project_imgs/hexacopter/testing_pic_2.jpg" alt="" width="1160" />
+				</div>
+			</div>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+				// Open modal on button click
+				document.querySelectorAll(".show-code-btn").forEach(btn => {
+					btn.addEventListener("click", function (event) {
+					event.preventDefault();
+					const targetId = btn.getAttribute("data-target");
+					const modal = document.getElementById(targetId);
+					if (modal) modal.style.display = "block";
+					});
 				});
-			});
 
-			// Close modal on click of 'X' or outside content
-			document.querySelectorAll(".modal").forEach(modal => {
-				modal.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
+				// Close modal on click of 'X' or outside content
+				document.querySelectorAll(".modal").forEach(modal => {
+					modal.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
 
-				window.addEventListener("click", function (event) {
-				if (event.target === modal) {
-					modal.style.display = "none";
-				}
+					window.addEventListener("click", function (event) {
+					if (event.target === modal) {
+						modal.style.display = "none";
+					}
+					});
 				});
-			});
 
-			// Close modal on Escape key
-			window.addEventListener("keydown", function (event) {
-				if (event.key === "Escape") {
-				document.querySelectorAll(".modal").forEach(modal => modal.style.display = "none");
-				}
-			});
+				// Close modal on Escape key
+				window.addEventListener("keydown", function (event) {
+					if (event.key === "Escape") {
+					document.querySelectorAll(".modal").forEach(modal => modal.style.display = "none");
+					}
+				});
 
-			// Copy code to clipboard
-			document.querySelectorAll(".copyBtn").forEach((copyBtn, index) => {
-				copyBtn.addEventListener("click", function () {
-				const codeBlock = copyBtn.parentElement.querySelector("code");
-				const text = codeBlock.innerText;
-				navigator.clipboard.writeText(text).then(() => {
-					copyBtn.innerText = "Copied!";
-					setTimeout(() => copyBtn.innerText = "Copy", 1000);
+				// Copy code to clipboard
+				document.querySelectorAll(".copyBtn").forEach((copyBtn, index) => {
+					copyBtn.addEventListener("click", function () {
+					const codeBlock = copyBtn.parentElement.querySelector("code");
+					const text = codeBlock.innerText;
+					navigator.clipboard.writeText(text).then(() => {
+						copyBtn.innerText = "Copied!";
+						setTimeout(() => copyBtn.innerText = "Copy", 1000);
+					});
+					});
 				});
 				});
-			});
-			});
-			</script>
+				</script>
 
 
 	</body>
