@@ -64,8 +64,16 @@
 									<header class="major">
 										<h2>Methodology</h2>
 									</header>
+									<p>For this project, I had to create code that would do a few things:</p>
+                                    <ul>
+                                        <li>Control the hexacopter motors</li>
+                                        <li>Pull raw wrench data from FT-300</li>
+                                        <li>Filter raw wrench data</li>
+                                        <li>Store all data in ROS bag</li>
+                                    </ul>
+                                    <p>To achieve these target, I created a ROS 2 (Specifically Foxy) enviorment.</p>
                                     <img src="images/project_imgs/hexacopter/whiteboard_ros_diagram.jpg" alt="" data-position="center center" height="515" />
-									<p>Talk about all the code you made.</p>
+                                    <p>Depicted above is a diagram of the ROS 2 network I created. Ovals represent nodes and rectangles represent topics. Arrows represent the flow of data, labeled either "Sub" for subscription or "Pub" for publish. Thick arrows labled "Launch" show which programs different launcher scripts activate.</p>
 								</div>
 							</section>
 
@@ -82,7 +90,7 @@
 											<header class="major">
 												<h3>Data Spoofers</h3>
 											</header>
-											<p>Created data spoofer for wrench data with simulated noise of FT-300 Sensor.</p>
+											<p>The first scripts to be Created were a data spoofer and data logger. The data spoofer would output a sine wave of wrench data with the simulated noise of FT-300 Sensor. The data logger would then expoentially filter the code and log it.</p>
                                             <ul class="actions">
 												<a href="#" class="button show-code-btn" data-target="codeModal1a">Spoofer Pub Code</a>
 												<p>_________</p>
@@ -120,7 +128,7 @@
 											<header class="major">
 												<h3>UR5 and FT-300 Data Connect</h3>
 											</header>
-											<p>Created code to connect UR5e and FT-300 sensor to ROS 2 programs.</p>
+											<p>Code to connect UR5e and FT-300 sensor to ROS 2 programs.</p>
 											<ul class="actions">
 												<a href="#" class="button show-code-btn" data-target="codeModal3">UR5 Connect Code</a>
 											</ul>
@@ -138,7 +146,7 @@
 											<header class="major">
 												<h3>PX4 Drone Control Program</h3>
 											</header>
-											<p>Created ROS 2 program node to control PX4 control board on drone to test motors.</p>
+											<p>ROS 2 program node that controlled PX4 control board on drone to test motors using Micro-XRCE-DDS-Agent, PX4-Autopilot, and ws_sensor_combined.</p>
 											<ul class="actions">
 												<a href="#" class="button show-code-btn" data-target="codeModal4">UR5 Connect Code</a>
 											</ul>
@@ -156,7 +164,7 @@
 											<header class="major">
 												<h3>ROS 2 Launchers</h3>
 											</header>
-											<p>Created luanchers that automatically connected to UR5, started data filters, PX4 motor test program, and logged data in a ROS bag.</p>
+											<p>Luanchers that automatically connected to UR5, started data filters, PX4 motor test program, and logged data in a ROS bag.</p>
 											<ul class="actions">
 												<a href="#" class="button show-code-btn" data-target="codeModal5">UR5 Connect and Filter</a>
 												<p>__________</p>
@@ -310,7 +318,7 @@ def main(args=None):
 			</div>
 
 			<!-- Show Spoofer Logger Code Button -->
-			<div id="codeModal1a" class="modal">
+			<div id="codeModal1b" class="modal">
 				<div class="modal-content">
 					<span class="close">&times;</span>
 					<button class="copyBtn">Copy</button>
